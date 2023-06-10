@@ -43,14 +43,43 @@ A full subtractor is a combinational circuit that performs subtraction involving
 
 
 ## Program:
-
-
+1.Half Subtractor:
+```py
+module exp4a(a,b,diff,borrow);
+input a,b;
+output diff,borrow;
+wire adash;
+xor(diff,a,b);
+not(adash,a);
+and(borrow,a,b);
+endmodule
+```
+2.Full Subtractor:
+```py
+module exp4b(a,b,c,diff,borrow);
+input a,b,c;
+output diff,borrow;
+wire adash,x,p,q,r;
+xor(x,b,c);
+xor(diff,a,x);
+not(adash,a);
+and(p,adash,c);
+and(q,b,c);
+and(r,adash,b);
+or(borrow,p,q,r);
+endmodule
 ## RTL Schematic:
+![image](https://github.com/kanishka2305/Subtractor/assets/113497357/c7f4afb2-a98f-439b-899e-f2e93b7e3253)
+![image](https://github.com/kanishka2305/Subtractor/assets/113497357/2c59757b-e4cb-499f-bb6a-f50091a56f11)
+
 
 
 
 
 ## Timing Diagram:
+![image](https://github.com/kanishka2305/Subtractor/assets/113497357/7c355c7e-12db-430f-846c-51a6c0d6c6aa)
+![image](https://github.com/kanishka2305/Subtractor/assets/113497357/6cfa36a3-f34d-42ff-8782-5371297bbd23)
+
 
 
 ## Result:
