@@ -67,7 +67,8 @@ and(p,adash,c);
 and(q,b,c);
 and(r,adash,b);
 or(borrow,p,q,r);
-endmodule
+endmodul
+```
 ## RTL Schematic:
 ![image](https://github.com/kanishka2305/Subtractor/assets/113497357/c7f4afb2-a98f-439b-899e-f2e93b7e3253)
 ![image](https://github.com/kanishka2305/Subtractor/assets/113497357/2c59757b-e4cb-499f-bb6a-f50091a56f11)
